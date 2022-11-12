@@ -10,10 +10,10 @@ nltk.download('brown')
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 
-with open('./vectorizer_Model.pkl', 'rb') as vectorizer_Model:
+with open('vectorizer_Model.pkl', 'rb') as vectorizer_Model:
     vec = pickle.load(vectorizer_Model)
 print(vec)
-with open('./NMF_Model.pkl', 'rb') as NMF_Model:
+with open('NMF_Model.pkl', 'rb') as NMF_Model:
     nmf = pickle.load(NMF_Model)
 print(nmf)
 
