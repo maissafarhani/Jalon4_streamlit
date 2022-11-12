@@ -6,6 +6,7 @@ import streamlit as st
 import nltk
 import pickle
 from textblob import TextBlob
+from PIL import Image
 nltk.download('brown')
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
@@ -71,6 +72,9 @@ def prediction(input : str,nb_features:int,dict=dict, blob=True) :
 
 
 #########################################################################################"
+image = Image.open('maissapic.png')
+
+st.image(image, caption='topic modeling')
 st.title("welcome to my app")
 text=st.text_input("enter your comment")
 number = st.number_input('Insert a number of topics',min_value=1,max_value=15,step=1)
